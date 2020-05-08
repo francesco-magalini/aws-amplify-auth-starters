@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Auth, Hub } from 'aws-amplify'
 
 import './App.css'
-import Router from './Router'
-import UserContext from './UserContext'
+import Router from './components/common/Router'
+import UserContext from './components/common/UserContext'
 
 class App extends Component {
   state = {

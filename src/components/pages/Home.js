@@ -2,9 +2,9 @@ import React from 'react'
 import { Auth } from 'aws-amplify'
 import QRCode from 'qrcode.react'
 import { css } from 'glamor'
-import UserContext from './UserContext'
-import Container from './Container'
-import Button from './Button'
+import UserContext from '../common/UserContext'
+import Container from '../layout/Container'
+import Button from '../layout/Button'
 
 class Home extends React.Component {
   state = {

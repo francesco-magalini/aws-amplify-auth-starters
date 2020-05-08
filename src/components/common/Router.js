@@ -7,12 +7,12 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom'
 import UserContext from './UserContext'
-import Header from './Header'
+import Header from '../layout/Header'
 
-import Authenticator from './Authenticator'
-import Home from './Home'
-import Private from './Private.js'
-import Profile from './Profile'
+import Authenticator from '../auth/Authenticator'
+import Home from '../pages/Home'
+import Private from '../pages/Private.js'
+import Profile from '../pages/Profile'
 
 class PrivateRoute extends React.Component {
   state = {
@@ -69,7 +69,7 @@ const Routes = () => (
         <Route path='/auth' exact component={Authenticator} />
         <Route path='/' exact component={Home} />
         <PrivateRoute path='/private' exact component={Private} />
-        <PrivateRoute path='/profile'  component={Profile} />
+        <PrivateRoute path='/profile' component={Profile} />
         <Route component={NoMatch} />
       </Switch>
     </div>

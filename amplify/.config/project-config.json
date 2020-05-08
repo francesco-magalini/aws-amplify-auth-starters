@@ -1,6 +1,6 @@
 {
-    "projectName": "awsamplifyauthstarte",
-    "version": "2.0",
+    "projectName": "preorder",
+    "version": "3.0",
     "frontend": "javascript",
     "javascript": {
         "framework": "react",

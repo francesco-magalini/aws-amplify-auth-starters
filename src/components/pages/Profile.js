@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Auth } from 'aws-amplify'
-import Container from './Container'
-import Button from './Button'
+import Container from '../layout/Container'
+import Button from '../layout/Button'
 
 class Profile extends React.Component {
   render() {

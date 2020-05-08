@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import { Link } from 'react-router-dom'
-import UserContext from './UserContext'
+import UserContext from '../common/UserContext'
 
 class Header extends React.Component {
   static contextType = UserContext
@@ -12,10 +12,10 @@ class Header extends React.Component {
       <div {...css(styles.container)}>
         <img
           style={styles.amplifyLogo}
-          src={require('./assets/amplifywhite.png')}
+          src={require('./../../assets/amplifywhite.png')}
         />
         <Link to='/' {...css(styles.link)}>
-          <h2 {...css(styles.title)}>AWS Amplify Auth Starter</h2>
+          <h2 {...css(styles.title)}>Preorder powererd by AWS Amplify</h2>
         </Link>
         <div {...css(styles.navContainer)}>
           <Link to='/' {...css(styles.link)}>
