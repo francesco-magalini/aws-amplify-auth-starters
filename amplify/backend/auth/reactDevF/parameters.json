@@ -1,9 +1,8 @@
 {
-    "identityPoolName": "awsamplifyauthstarteca5ac8e2_identitypool_ca5ac8e2",
-    "allowUnauthenticatedIdentities": false,
-    "openIdLambdaRoleName": "awsampca5ac8e2_openid_lambda_role",
-    "resourceNameTruncated": "awsampca5ac8e2",
-    "userPoolName": "awsamplifyauthstarteca5ac8e2_userpool_ca5ac8e2",
+    "identityPoolName": "reactDevF",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "reactDd5ccfac5",
+    "userPoolName": "reactDevF",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -21,7 +20,6 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientName": "awsampca5ac8e2_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
@@ -30,17 +28,22 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "mfaLambdaRole": "awsampca5ac8e2_totp_lambda_role",
-    "userpoolClientLambdaRole": "awsampca5ac8e2_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "reactDd5ccfac5_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "awsamplifyauthstarteca5ac8e2",
+    "useDefault": "manual",
     "authSelections": "identityPoolAndUserPool",
-    "authRoleName": {
-        "Ref": "AuthRoleName"
-    },
-    "unauthRoleName": {
-        "Ref": "UnauthRoleName"
-    },
+    "resourceName": "reactDevF",
+    "thirdPartyAuth": false,
+    "usernameAttributes": [
+        "email"
+    ],
+    "userPoolGroups": true,
+    "adminQueries": false,
+    "triggers": "{}",
+    "hostedUI": false,
+    "userPoolGroupList": [
+        "Admins"
+    ],
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -53,7 +56,9 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
-    "additionalQuestions": [],
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
     "dependsOn": []
 }
