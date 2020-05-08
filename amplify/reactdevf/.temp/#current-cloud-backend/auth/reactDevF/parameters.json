@@ -1,7 +1,7 @@
 {
     "identityPoolName": "reactDevF",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "reactDevF",
+    "resourceNameTruncated": "reactDd5ccfac5",
     "userPoolName": "reactDevF",
     "autoVerifiedAttributes": [
         "email"
@@ -28,7 +28,7 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "reactDevF_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "reactDd5ccfac5_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
     "useDefault": "manual",
     "authSelections": "identityPoolAndUserPool",

@@ -69,4 +69,3 @@ amplify init
 ```sh
 amplify push
 ```
-
