@@ -1,8 +1,8 @@
 # Preorder
 
-This is the Preorder app repository,
+This is the Preorder app repository
 
-## Miscellaneus
+## Project info
 
 ### Stack
 
@@ -11,14 +11,14 @@ This is the Preorder app repository,
 
 ### AWS references
 
-- Amplify Console: https://eu-central-1.console.aws.amazon.com/amplify/
+- Amplify Console: [here](https://eu-central-1.console.aws.amazon.com/amplify/)
 
 ### Resources
 
 - Amplify platform: [here](https://docs.amplify.aws/)
-- AWS Amplify Serverless GraphQL React workshop: [here](https://www.youtube.com/watch?v=HZUlQ7Z2xHQ
-- React JS Crash Course: [here](https://www.youtube.com/watch?v=sBws8MSXN7A
-- Advanced Design Patterns for DynamoDB: [here](https://www.youtube.com/watch?v=HaEPXoXVf2k
+- AWS Amplify Serverless GraphQL React workshop: [here](https://www.youtube.com/watch?v=HZUlQ7Z2xHQ)
+- React JS Crash Course: [here](https://www.youtube.com/watch?v=sBws8MSXN7A)
+- Advanced Design Patterns for DynamoDB: [here](https://www.youtube.com/watch?v=HaEPXoXVf2k)
    
 ## Getting started    
 
