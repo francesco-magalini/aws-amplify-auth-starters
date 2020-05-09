@@ -67,7 +67,7 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-preorder-test-184934-deployment",
+					"S3Bucket": "amplify-preorder-prod-185037-deployment",
 					"S3Key": "amplify-builds/AdminQueriesa63fb22e-674e73526c75544b4963-build.zip"
 				}
 			}
