@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "preorderdev",
+    "identityPoolName": "preorder",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "preorde4531cb7",
-    "userPoolName": "preorderdev",
+    "resourceNameTruncated": "preordf0ae5414",
+    "userPoolName": "preorder",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,22 +28,23 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "preorde4531cb7_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "preordf0ae5414_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
     "useDefault": "manual",
     "authSelections": "identityPoolAndUserPool",
-    "resourceName": "preorderdev",
+    "resourceName": "preorder",
     "thirdPartyAuth": false,
     "usernameAttributes": [
         "email"
     ],
     "userPoolGroups": true,
-    "adminQueries": false,
+    "adminQueries": true,
     "triggers": "{}",
     "hostedUI": false,
     "userPoolGroupList": [
         "Admins"
     ],
+    "adminQueryGroup": "Admins",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",

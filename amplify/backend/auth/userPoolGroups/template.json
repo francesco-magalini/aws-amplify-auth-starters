@@ -1,23 +1,23 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
-        "authpreorderdevUserPoolId": {
+        "authpreorderUserPoolId": {
             "Type": "String",
-            "Default": "authpreorderdevUserPoolId"
+            "Default": "authpreorderUserPoolId"
         },
         
-        "authpreorderdevIdentityPoolId": {
+        "authpreorderIdentityPoolId": {
             "Type": "String",
-            "Default": "authpreorderdevIdentityPoolId"
+            "Default": "authpreorderIdentityPoolId"
         },
         
-        "authpreorderdevAppClientID": {
+        "authpreorderAppClientID": {
             "Type": "String",
-            "Default": "authpreorderdevAppClientID"
+            "Default": "authpreorderAppClientID"
         },
-        "authpreorderdevAppClientIDWeb": {
+        "authpreorderAppClientIDWeb": {
             "Type": "String",
-            "Default": "authpreorderdevAppClientIDWeb"
+            "Default": "authpreorderAppClientIDWeb"
         },
         "AuthRoleArn": {
             "Type": "String"
@@ -55,7 +55,7 @@
               },
               
               "UserPoolId" : {
-                "Ref": "authpreorderdevUserPoolId"
+                "Ref": "authpreorderUserPoolId"
               } 
             }
         },
@@ -68,7 +68,7 @@
                         "",
                         [
                           {
-                            "Ref": "authpreorderdevUserPoolId"
+                            "Ref": "authpreorderUserPoolId"
                           },
                           "-AdminsGroupRole"
                         ]
@@ -85,7 +85,7 @@
                             },
                             "Action": "sts:AssumeRoleWithWebIdentity",
                             "Condition": {
-                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authpreorderdevIdentityPoolId"}},
+                              "StringEquals": {"cognito-identity.amazonaws.com:aud": {"Ref":"authpreorderIdentityPoolId"}},
                               "ForAnyValue:StringLike": {"cognito-identity.amazonaws.com:amr": "authenticated"}
                             }
                         }
@@ -111,7 +111,7 @@
                                 "",
                                 [
                                   
-                                  "preorderdev",
+                                  "preorder",
                                   "-ExecutionRole-",
                                   {
                                     "Ref": "env"
@@ -270,16 +270,16 @@
                     "Ref": "UnauthRoleArn"
                 },
                 "identityPoolId": {
-                    "Ref": "authpreorderdevIdentityPoolId"
+                    "Ref": "authpreorderIdentityPoolId"
                 },
                 "userPoolId": {
-                    "Ref": "authpreorderdevUserPoolId"
+                    "Ref": "authpreorderUserPoolId"
                 },
                 "appClientIDWeb": {
-                    "Ref": "authpreorderdevAppClientIDWeb"
+                    "Ref": "authpreorderAppClientIDWeb"
                 },
                 "appClientID": {
-                    "Ref": "authpreorderdevAppClientID"
+                    "Ref": "authpreorderAppClientID"
                 },
                 "region": {
                     "Ref": "AWS::Region"
