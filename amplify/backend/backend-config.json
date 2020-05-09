@@ -21,44 +21,5 @@
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
 		}
-	},
-	"function": {
-		"AdminQueriesa63fb22e": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "auth",
-					"resourceName": "preorder",
-					"attributes": [
-						"UserPoolId"
-					]
-				}
-			]
-		}
-	},
-	"api": {
-		"AdminQueries": {
-			"service": "API Gateway",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "auth",
-					"resourceName": "preorder",
-					"attributes": [
-						"UserPoolId"
-					]
-				},
-				{
-					"category": "function",
-					"resourceName": "AdminQueriesa63fb22e",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				}
-			]
-		}
 	}
 }

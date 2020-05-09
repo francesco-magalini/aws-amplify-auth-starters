@@ -1,15 +1,16 @@
 {
-  "name": "react-authentication",
+  "name": "preorder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-amplify": "^1.1.9",
-    "aws-amplify-react": "^2.1.3",
+    "@aws-amplify/cli": "^4.19.0",
+    "aws-amplify": "3.0.10",
+    "aws-amplify-react": "^4.1.9",
     "glamor": "^2.20.40",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
