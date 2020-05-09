@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Auth } from 'aws-amplify'
 import Container from '../layout/Container'
 import Button from '../layout/Button'
+import {signOut} from './../auth/SignOut'
 
 class Profile extends React.Component {
   render() {
@@ -16,14 +16,6 @@ class Profile extends React.Component {
       </Container>
     )
   }
-}
-
-function signOut() {
-  Auth.signOut()
-    .then(() => {
-      this.props.history.push('/auth')
-    })
-    .catch(() => console.log('error signing out...'))
 }
 
 export default Profile

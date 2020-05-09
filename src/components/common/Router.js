@@ -11,8 +11,9 @@ import Header from '../layout/Header'
 
 import Authenticator from '../auth/Authenticator'
 import Home from '../pages/Home'
-import Private from '../pages/Private.js'
 import Profile from '../pages/Profile'
+import Tables from '../pages/Tables'
+import Orders from '../pages/Orders'
 
 class PrivateRoute extends React.Component {
   state = {
@@ -68,8 +69,9 @@ const Routes = () => (
       <Switch>
         <Route path='/auth' exact component={Authenticator} />
         <Route path='/' exact component={Home} />
-        <PrivateRoute path='/private' exact component={Private} />
         <PrivateRoute path='/profile' component={Profile} />
+        <PrivateRoute path='/tables' component={Orders} />
+        <PrivateRoute path='/orders' component={Tables} />
         <Route component={NoMatch} />
       </Switch>
     </div>

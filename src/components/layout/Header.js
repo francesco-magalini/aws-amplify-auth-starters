@@ -13,16 +13,20 @@ class Header extends React.Component {
         <img
           style={styles.amplifyLogo}
           src={require('./../../assets/amplifywhite.png')}
+          alt="amplifywhite logo"
         />
         <Link to='/' {...css(styles.link)}>
-          <h2 {...css(styles.title)}>Preorder powererd by AWS Amplify</h2>
+          <h2 {...css(styles.title)}>Preorder</h2>
         </Link>
         <div {...css(styles.navContainer)}>
           <Link to='/' {...css(styles.link)}>
             <p {...css(styles.navItem)}>Home</p>
           </Link>
-          <Link to='/private' {...css(styles.link)}>
-            <p {...css(styles.navItem)}>Private</p>
+          <Link to='/tables' {...css(styles.link)}>
+            <p {...css(styles.navItem)}>Tables</p>
+          </Link>
+          <Link to='/orders' {...css(styles.link)}>
+            <p {...css(styles.navItem)}>Orders</p>
           </Link>
           {
             isLoaded ? isAuthenticated ? (
@@ -35,6 +39,7 @@ class Header extends React.Component {
               </Link>
             ) : null
           }
+         
         </div>
       </div>
     )

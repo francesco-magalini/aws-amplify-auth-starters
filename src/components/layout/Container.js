@@ -14,7 +14,7 @@ const styles = {
     width: 900,
     margin: '0 auto',
     '& h1': {
-      textAlign: 'left'
+      textAlign: 'center'
     }
   }
 }
