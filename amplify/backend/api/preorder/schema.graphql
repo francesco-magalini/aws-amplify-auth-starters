@@ -1,0 +1,171 @@
+type Company
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Vat: String
+  Name: String
+  Logo: String
+  Enabled: Boolean
+}
+
+type Party
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  CompanyName: String
+  FirstName: String
+  LastName: String
+  Email: String
+  Mobile: String
+  AddressLine1: String
+  AddressLine2: String
+  Country: String
+}
+
+type Customer
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  Party: Party
+  Description: String
+}
+
+type Vendor
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  Party: Party
+  Description: String
+}
+
+type SalesOrder
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  Customer: Customer
+  Title: String
+  SalesOrderLine: [SalesOrderLine!] @connection
+}
+
+type SalesOrderLine
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  Item: Item
+  Qty: Int
+  Status: String
+}
+
+type Item
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through API + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  Name: String
+  Description: String
+}
+
+type Employee
+  @model
+  @auth(
+    rules: [
+      #authenticated through COGNITO_USER_POOL
+      {
+        allow: groups
+        groups: ["SysAdmins"]
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      #unauthenticated through COGNITO_IDENTITY_POOL + IAM Role
+      #
+    ]
+  ) {
+  Company: Company
+  FirstName: String
+  LastName: String
+  Email: String
+  Position: String
+  Enabled: Boolean
+}
